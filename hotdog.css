@@ -1,0 +1,14 @@
+body, html {
+    margin : 0;
+    height: 100%
+}
+
+body {
+    background-color: #F9D557;
+}
+
+h1 {
+  color: #CE4621
+  text-align: center;
+	font-size: 60px;
+}
