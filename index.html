@@ -32,7 +32,8 @@
   
     function subTotal(a, b, c){
           var subTotal = ((a * 4.25) + (b * 2.60) + (c * 1.50));
-          return subTotal.toFixed(2);
+          subTotal = Math.round(subTotal * 100) / 100;
+          return subTotal;
     }
     function actualTotal(a){
           var actualTotal = a;
@@ -40,7 +41,8 @@
               actualTotal = getDiscount(a);
           }
           actualTotal = actualTotal + calculateTax(a); 
-          return actualTotal.toFixed(2);
+          actualTotal = Math.round(actualTotal * 100) / 100;
+          return actualTotal;
      }
      function getDiscount(a){
            a = a - (a * .10);
@@ -48,7 +50,8 @@
      }
      function calculateTax(a){
             tax = a * .0625;
-          return tax.toFixed(2);
+            tax = Math.round(tax * 100) / 100;
+            return tax;
      }
      window.onload = function printResult() {
               document.getElementById("numhotdog").innerHTML =
