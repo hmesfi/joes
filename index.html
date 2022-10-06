@@ -39,14 +39,14 @@
     function actualTotal(a){
           var actualTotal = a;
           if (actualTotal >= 20){
-              actualTotal = getDiscount(a);
+              actualTotal = actualTotal - getDiscount(a);
           }
           actualTotal = actualTotal + calculateTax(a); 
           actualTotal = Math.round(actualTotal * 100) / 100;
           return actualTotal;
      }
      function getDiscount(a){
-           a = a - (a * .10);
+           a = a * .10;
            return a;
      }
      function calculateTax(a){
@@ -68,7 +68,7 @@
                        "Discount: $0";
              } else {
                      document.getElementById("discount").innerHTML =
-                      "Discount price: $" + discount;
+                      "Discount: $" + discount;
              }
              document.getElementById("tax").innerHTML =
                  "Tax: $" + taxCost;
