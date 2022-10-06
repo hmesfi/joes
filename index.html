@@ -14,7 +14,13 @@
 <body>
   <h1>Joe's Hotdog Stand</h1>
   <img src= jop.png alt= "hotdog cartoon">
- <p id = "demo"></p>
+ <p id = "numhotdog"></p>
+ <p id = "numfries"></p>
+ <p id = "numsoda"></p>
+ <p id = "subtotal"></p>
+ <p id = "discount"></p>
+ <p id = "tax"></p>
+ <p id = "realTotal"></p>
  <script>
     var numOfHotdogs = prompt("How many hotdogs do you want?");
     var numOfFries = prompt("How many orders of fries do you want?");
@@ -45,24 +51,24 @@
           return tax;
      }
      window.onload = function printResult() {
-              document.getElementById("demo").innerHTML =
+              document.getElementById("numhotdog").innerHTML =
             "Number of hotdogs:" + numOfHotdogs;
-              document.getElementById("demo").innerHTML =
+              document.getElementById("numfries").innerHTML =
             "Number of fries:" + numOfFries;
-              document.getElementById("demo").innerHTML =
+              document.getElementById("numsoda").innerHTML =
             "Number of sodas:" + numOfSodas;
-              document.getElementById("demo").innerHTML =
+              document.getElementById("subtotal").innerHTML =
             "Subtotal:" + subTotal;
              if (subTotal < 20){
-                      document.getElementById("demo").innerHTML =
+                      document.getElementById("discount").innerHTML =
                        "Discount: 0";
              } else {
-                     document.getElementById("demo").innerHTML =
+                     document.getElementById("discount").innerHTML =
                       "Discount price:" + discount;
              }
-             document.getElementById("demo").innerHTML =
+             document.getElementById("tax").innerHTML =
                  "Tax:" + taxCost;
-             document.getElementById("demo").innerHTML =
+             document.getElementById("realTotal").innerHTML =
                  "Final total:" + realTotal;
      }
     
