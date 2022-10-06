@@ -4,11 +4,12 @@ body, html {
 }
 
 body {
+    text-align: center;
     background-color: #F9D557;
 }
 
 h1 {
-  color: #CE4621
   text-align: center;
+  color: #CE4621
   font-size: 60px;
 }
